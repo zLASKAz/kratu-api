@@ -1,0 +1,67 @@
+### post
+POST http://localhost:3000/kratu/post
+content-type: application/json
+
+{
+  "name": "bell2",
+  "timeStamp": "timeStame",
+  "tagName": "tagname",
+  "title": "title",
+  "content": "content content",
+  "comments": [
+    {
+      "nameComment": "bell2",
+      "image": "bell image",
+      "timeStampComment": "timestamp comment",
+      "textComment": "textcomment textcomment textcomment textcomment"
+    }
+  ]
+}
+
+### post without comment
+POST http://localhost:3000/kratu/post
+content-type: application/json
+
+{
+  "name": "Nicholas",
+  "timeStamp": "timeStamp",
+  "tagName": "History",
+  "title": "The Big Short War",
+  "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ",
+  "comments": []
+}
+
+###
+POST http://localhost:3000/kratu/1/comments
+Content-Type: application/json
+
+{
+  "nameComment": "bell2",
+  "image": "bell image",
+  "timeStampComment": "timestamp comment",
+  "textComment": "textcomment textcomment textcomment textcomment"
+}
+### get
+GET http://localhost:3000/kratu/
+
+
+### find one
+GET http://localhost:3000/kratu/1
+
+### Delete 
+Delete http://localhost:3000/kratu/delete/2
+
+### Delete all
+Delete http://localhost:3000/kratu/delete-all
+
+### update
+PATCH http://localhost:3000/kratu/update/3
+Content-Type: application/json
+
+{
+  "name": "updatedName/",
+  "timeStamp": "updatedTimeStamp",
+  "tagName": "updatedTagName",
+  "title": "updatedTitle",
+  "content": "updatedContent"
+}
